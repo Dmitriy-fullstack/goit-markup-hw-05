@@ -318,6 +318,46 @@ fill: #AFB1B8;
     text-align: left;
     width: 270px;
 }
+.work-title {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-color);
+    position: absolute;
+    bottom: 27px;
+    left: 83px;
+    z-index: 1;
+
+    
+}
+
+.work-img {
+    position: relative;
+}
+
+.work-img::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 370px;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+    
+    /* position: absolute;
+    height: 70px; */
+    /* background-color: rgba(47, 48, 58, 0.8); */
+}
+
+
+
+
+.work-item {
+    position: relative;
+}
 
 .section-margin {
     margin-top: 94px;
@@ -536,12 +576,22 @@ color: rgba(255, 255, 255, 0.6);
     display: flex;
     flex-wrap: wrap;
 }
-.examples .card {
-    width: 370px;
+
+.card {
+    position: relative;
+    width: calc((100% - 60px) / 3);
     margin-right: 30px;
-    height: 404px;
+    border: 1px solid #EEEEEE;
     margin-bottom: 30px;
+    display: block;
 }
+
+.card-link {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
 .card:nth-child(3n) {
     margin-right: 0;
 }
@@ -549,7 +599,16 @@ color: rgba(255, 255, 255, 0.6);
     margin-bottom: 0;
 }
 .card-text {
-    margin-top: 0;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--white-color);
+    background: rgba(33, 150, 243, 0.9);
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 63px;
+    padding-bottom: 63px;
+    height: 294px;
+    margin: 0;
     
 }
 
@@ -562,22 +621,27 @@ color: rgba(255, 255, 255, 0.6);
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
-    line-height: 36px;
+    line-height: 2;
     letter-spacing: 0.06em;
     color: var(--primary-text-color);
     margin-top: 20px;
-    margin-bottom: 4px;
+    text-align: left;
+    padding-left: 24px;
+    padding-right: 24px;
+
 }
 .examples-item {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 1.87;
     letter-spacing: 0.03em;
     color: var(--title-text-color);
-    margin-top: 0;
+    margin-top: 4px;
     margin-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 
