@@ -52,6 +52,10 @@
     color: var(--accent-color);
 }
 
+.border {
+    border-bottom: 1px solid #ECECEC;
+}
+
 /* стилизуем навигацию и контакты */
 .site-nav {
     font-family: 'Roboto', sans-serif;
@@ -60,8 +64,21 @@
 }
 .site-nav .item {
     margin-left: auto;
-    
+    position: relative;
+        
 }
+
+.active ::after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+height: 4px;
+width: 100%;
+background-color: var(--accent-color);
+border-radius: 4px;
+}
+
 .site-nav .item:not(:last-child) {
     margin-right: 50px;
 }
@@ -69,8 +86,8 @@
     display: block;
     color: var(--primary-text-color);
     font-family: 'Roboto', sans-serif;
-    padding-top:24px;
-    padding-bottom: 25px;
+    padding-top: 32px;
+    padding-bottom: 32px;
     
 }
 
