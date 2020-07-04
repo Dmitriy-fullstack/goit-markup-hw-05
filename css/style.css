@@ -327,11 +327,12 @@ fill: #AFB1B8;
     text-transform: uppercase;
     color: var(--white-color);
     position: absolute;
+    margin-top: 0;
+    margin-bottom: 0;
     bottom: 27px;
     left: 83px;
-    z-index: 1;
-
-    
+  
+     
 }
 
 .work-img {
@@ -347,10 +348,7 @@ fill: #AFB1B8;
     height: 70px;
     background-color: rgba(47, 48, 58, 0.8);
     
-    /* position: absolute;
-    height: 70px; */
-    /* background-color: rgba(47, 48, 58, 0.8); */
-}
+   }
 
 
 
@@ -572,24 +570,30 @@ color: rgba(255, 255, 255, 0.6);
     margin-left: 8px;
 }
 
-.examples {
+.projects {
     display: flex;
     flex-wrap: wrap;
 }
 
 .card {
-    position: relative;
+    
     width: calc((100% - 60px) / 3);
     margin-right: 30px;
     border: 1px solid #EEEEEE;
     margin-bottom: 30px;
     display: block;
+     
+}
+
+.card :hover, .card :focus {
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16), 0px 0px 4px rgba(0, 0, 0, 0.06), 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 6px 4px 4px;
 }
 
 .card-link {
-    margin: 0;
-    padding: 0;
-    display: block;
+    display: inline-block;
+    position: relative;
+    /* pointer-events: none; */
 }
 
 .card:nth-child(3n) {
@@ -599,6 +603,7 @@ color: rgba(255, 255, 255, 0.6);
     margin-bottom: 0;
 }
 .card-text {
+    position: absolute;
     font-size: 18px;
     line-height: 1.55;
     color: var(--white-color);
@@ -609,14 +614,20 @@ color: rgba(255, 255, 255, 0.6);
     padding-bottom: 63px;
     height: 294px;
     margin: 0;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    display: inline-block;
     
+}
+
+.card-text :hover {
+    background: black;
 }
 
 
 
-
-
-.examples-title {
+.projects-title {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -630,7 +641,7 @@ color: rgba(255, 255, 255, 0.6);
     padding-right: 24px;
 
 }
-.examples-item {
+.projects-item {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -638,8 +649,8 @@ color: rgba(255, 255, 255, 0.6);
     line-height: 1.87;
     letter-spacing: 0.03em;
     color: var(--title-text-color);
-    margin-top: 4px;
-    margin-bottom: 20px;
+    /* margin-top: 4px; */
+    /* margin-bottom: 20px; */
     padding-left: 24px;
     padding-right: 24px;
 }
